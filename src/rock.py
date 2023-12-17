@@ -55,33 +55,22 @@ class Rock(BaseStructure):
 
     def draw(self, screen: pygame.Surface):
         if not Globals.LIGHTING:
-            # super().draw(screen)
             points = [Point(i).rotate(self.angle) + self.pos for i in self.outer_points]
             pygame.draw.polygon(screen, 'black', points)
             return
         points = [i.rotate(self.angle) + self.pos for i in self.points]
-        # x_points = [i.x for i in points]
-        # y_points = [i.y for i in points]
-        # self.rel_dimensions = [max(x_points) - min(x_points), max(y_points) - min(y_points)]
         s = pygame.Surface([Globals.ROCK_WIDTH, Globals.ROCK_HEIGHT])
         s = pygame.transform.rotate(s, self.angle)
         self.rel_dimensions = [*s.get_rect().size]
-        # self.rel_dimensions[0] += 25
-        # self.rel_dimensions[1] += 25
         mouse_pos = Point(*Globals.LIGHT_COORD)
         for simplex in self.tri.simplices:
             d = [points[i].distance_to(mouse_pos) for i in simplex]
             k = 255 - min(d) / 4
             k = pygame.math.clamp(k, 0, 255)
-            # if k <= 0:
-            #     continue
             k = k / 255
             color = pygame.Color(Globals.ROCK_COLOR)
             r = int(color.r * k)
             g = int(color.g * k)
             b = int(color.b * k)
             color.update(r, g, b)
-            # p = [map(int, points[i]) for i in simplex]
-            # p = [[0, 0], [10, 0], [0, 10]]
-            # pygame.gfxdraw.filled_trigon(screen, *p[0], *p[1], *p[2], [*color])
             pygame.draw.polygon(screen, color, [points[i] for i in simplex])

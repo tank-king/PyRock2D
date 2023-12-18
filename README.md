@@ -3,15 +3,15 @@ A 2D Rock Generator featuring Real-Time Dynamic Lighting
 
 ## Table of Contents
 
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [Features](#features)
-4. [Examples](#examples)
-5. [Contributing](#contributing)
-6. [Issues](#issues)
-7. [License](#license)
-8. [Contact](#contact)
-8. [Version History](#version-history)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [Issues](#issues)
+- [License](#license)
+- [Contact](#contact)
+- [Version History](#version-history)
 
 ## Installation
 
@@ -21,19 +21,25 @@ A 2D Rock Generator featuring Real-Time Dynamic Lighting
 
 ## Usage
 
-...
+Clone this repository, and run `main.py`.
+Requires: scipy, numpy, pygame-ce
 
 ## Features
 
-...
+- change dimensions of rocks
+- change angles of rocks
+- choose the amount of points used for triangulation
+- features real-time dynamic lighting
+- geometric data can be exported for physics simulations
+- customize the colors of the rock
+- export as PNG or JSON formats
 
 ## Examples
 
-...
 
 ## Contributing
 
-...
+Describe Issues in the "Issues" section or open a new Pull Request with bug-fixes / enhancements.
 
 ## Issues
 
@@ -45,7 +51,7 @@ This project is licensed under the [MIT License](LICENSE.md).
 
 ## Contact
 
-For questions or support, contact [Your Name] at [your.email@example.com].
+For questions or support, join my [Discord Server](https://discord.com/invite/qh8XGWypvg)
 
 ## Version History
 

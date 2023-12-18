@@ -1,4 +1,4 @@
-# PyRock2D
+![banner](screenshots/banner.png)
 A 2D Rock Generator featuring Real-Time Dynamic Lighting
 
 ## Table of Contents

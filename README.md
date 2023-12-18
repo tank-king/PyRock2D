@@ -1,4 +1,5 @@
 ![banner](screenshots/banner.png)
+
 A 2D Rock Generator featuring Real-Time Dynamic Lighting
 
 ## Table of Contents
@@ -35,7 +36,9 @@ Requires: scipy, numpy, pygame-ce
 - export as PNG or JSON formats
 
 ## Examples
-
+![rock1](screenshots/rock1.png)
+![rock2](screenshots/rock2.png)
+![rock3](screenshots/rock3.png)
 
 ## Contributing
 
